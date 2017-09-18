@@ -9,6 +9,7 @@ ZSH_THEME="theunraveler"
 [[ -f $HOME/.bin/color-mode/current-color-mode ]] && SOLARIZED_THEME=$(<$HOME/.bin/color-mode/current-color-mode)
 
 alias disk-usage="sudo du */ -smx | sort -n"
+alias n="nvim"
 
 alias screencastRecord="$HOME/.bin/video-recording.sh -s"
 alias webcamRecord="$HOME/.bin/video-recording.sh -w"
@@ -83,3 +84,7 @@ compctl -K _completemarks jump
 compctl -K _completemarks unmark
 # End jumps
 
+function start-ssh {
+    eval $(ssh-agent)
+    ssh-add ~/.ssh/id_ed25519
+}
