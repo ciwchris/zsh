@@ -92,3 +92,12 @@ function start-ssh {
     eval $(ssh-agent)
     ssh-add ~/.ssh/id_ed25519
 }
+
+https://dev.to/ricardomol/note-taking-from-the-command-line-156 (in comments)
+function note {
+  if [ ! -z "$1" ]; then
+    echo $(date +"%Y%m%d-%H%M%S") $@  >> $HOME/notes/TempNotes.wiki
+  else
+    echo $(date +"%Y%m%d-%H%M%S") "$(cat)"  >> $HOME/notes/TempNotes.wiki
+  fi
+}
