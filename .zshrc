@@ -8,6 +8,10 @@ ZSH=/usr/share/oh-my-zsh/
 ZSH_THEME="theunraveler"
 [[ -f $HOME/.bin/color-mode/current-color-mode ]] && SOLARIZED_THEME=$(<$HOME/.bin/color-mode/current-color-mode)
 
+# z: https://github.com/rupa/z
+[[ -r "/usr/share/z/z.sh" ]] && source /usr/share/z/z.sh
+
+
 alias disk-usage="sudo du */ -smx | sort -n"
 alias n="nvim"
 
