@@ -8,12 +8,16 @@ ZSH=/usr/share/oh-my-zsh/
 ZSH_THEME="theunraveler"
 [[ -f $HOME/.bin/color-mode/current-color-mode ]] && SOLARIZED_THEME=$(<$HOME/.bin/color-mode/current-color-mode)
 
+PATH+=:$HOME/.bin
+
 # z: https://github.com/rupa/z
 [[ -r "/usr/share/z/z.sh" ]] && source /usr/share/z/z.sh
 
 
 alias disk-usage="sudo du */ -smx | sort -n"
 alias n="nvim"
+alias vim="nvim"
+alias cls="clear"
 
 alias screencastRecord="$HOME/.bin/video-recording.sh -s"
 alias webcamRecord="$HOME/.bin/video-recording.sh -w"
@@ -64,7 +68,6 @@ source /usr/share/nvm/init-nvm.sh
 # Customize to your needs...
 export VISUAL=nvim
 export EDITOR=nvim
-export ELM_HOME=/usr/local/lib/node_modules/elm/share
 
 # Create symbolic links to directory location to jump to the location easily
 # http://jeroenjanssens.com/2013/08/16/quickly-navigate-your-filesystem-from-the-command-line.html
@@ -93,7 +96,7 @@ function start-ssh {
     ssh-add ~/.ssh/id_ed25519
 }
 
-https://dev.to/ricardomol/note-taking-from-the-command-line-156 (in comments)
+# https://dev.to/ricardomol/note-taking-from-the-command-line-156 (in comments)
 function note {
   if [ ! -z "$1" ]; then
     echo $(date +"%Y%m%d-%H%M%S") $@  >> $HOME/notes/TempNotes.wiki
