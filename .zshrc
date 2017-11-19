@@ -30,6 +30,10 @@ help-vim() {
     echo "BLines"
     echo "GFiles?"
 }
+help-i3() {
+    echo "mod+Shift+l           lock"
+    echo "mod+Shift+r           reload"
+}
 help-fzf
 
 # z: https://github.com/rupa/z
@@ -61,6 +65,10 @@ export FIREFOX_BIN=/usr/bin/firefox
 export CHROME_BIN=/usr/bin/chromium
 export BROWSER=/usr/bin/firefox
 
+
+github() {
+    xdg-open "https://github.$(git config remote.origin.url | cut -f2 -d. | tr ':' /)"
+}
 
 [[ -r "/usr/share/fzf/key-bindings.zsh" ]] && source /usr/share/fzf/key-bindings.zsh
 [[ -r "/usr/share/fzf/completion.zsh" ]] && source /usr/share/fzf/completion.zsh
