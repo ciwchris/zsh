@@ -10,6 +10,14 @@ ZSH_THEME="theunraveler"
 
 PATH+=:$HOME/.bin
 
+help-wifi() {
+    # https://wiki.archlinux.org/index.php/NetworkManager#nmcli
+    # https://fedoraproject.org/wiki/Networking/CLI
+    echo "nmcli device wifi list   List available access points(AP) to connect to"
+    echo "nmcli device wifi rescan Refresh previous list"
+    echo "nmcli device wifi connect <SSID|BSSID> password <password>"
+    echo "nmtui                    UI to edit/delete connections"
+}
 help-fzf() {
     echo "z                    Use z with fzf"
     echo "fe [FUZZY PATTERN]   Open the selected file with the default editor"
@@ -29,6 +37,7 @@ help-vim() {
     echo "Lines"
     echo "BLines"
     echo "GFiles?"
+    echo "Help navigation: Ctrl-o and t"
 }
 help-i3() {
     echo "mod+Shift+l           lock"
