@@ -65,10 +65,10 @@ alias monitor-off="sleep 1; xset dpms force off"
 alias restart="shutdown -r now"
 alias shutdown="shutdown -P now"
 
-alias monitor-vga="xrandr --output VGA1 --auto --right-of LVDS1"
-alias monitor-vga-off="xrandr --output VGA1 --off"
-alias monitor-hdmi="xrandr --output HDMI1 --auto --right-of LVDS1"
-alias monitor-hdmi-off="xrandr --output HDMI1 --off"
+# To control audio run pavucontrol. Then in Configuration and set Profile to HDMI2
+alias monitor-hdmi-right="xrandr --output HDMI2 --auto --right-of eDP1"
+alias monitor-hdmi-same="xrandr --output HDMI2 --auto --same-as eDP1"
+alias monitor-hdmi-off="xrandr --output HDMI2 --off"
 
 export FIREFOX_BIN=/usr/bin/firefox
 export CHROME_BIN=/usr/bin/chromium
