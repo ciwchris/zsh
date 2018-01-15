@@ -16,6 +16,7 @@ help-wifi() {
     echo "nmcli device wifi list   List available access points(AP) to connect to"
     echo "nmcli device wifi rescan Refresh previous list"
     echo "nmcli device wifi connect <SSID|BSSID> password <password>"
+    echo "nmcli connection down/up ssid"
     echo "nmtui                    UI to edit/delete connections"
 }
 help-fzf() {
@@ -43,6 +44,13 @@ help-i3() {
     echo "mod+Shift+l           lock"
     echo "mod+Shift+r           reload"
 }
+help-code() {
+    echo "shift+<esc>           close any popup window"
+    echo "gd                    go to definition"
+    echo "gh                    show tooltip"
+    echo "ctrl+p #              go to type"
+}
+
 help-fzf
 
 # z: https://github.com/rupa/z
@@ -69,6 +77,9 @@ alias shutdown="shutdown -P now"
 alias monitor-hdmi-right="xrandr --output HDMI2 --auto --right-of eDP1"
 alias monitor-hdmi-same="xrandr --output HDMI2 --auto --same-as eDP1"
 alias monitor-hdmi-off="xrandr --output HDMI2 --off"
+
+# .Net
+alias get-giti="curl https://raw.githubusercontent.com/github/gitignore/master/VisualStudio.gitignore -o .gitignore"
 
 export FIREFOX_BIN=/usr/bin/firefox
 export CHROME_BIN=/usr/bin/chromium
