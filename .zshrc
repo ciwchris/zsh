@@ -12,6 +12,26 @@ PATH+=:$HOME/.bin:$HOME/go/bin
 export GOPATH=$HOME/go
 export LANG=en_US.UTF-8
 
+help-zsh() {
+    echo "ctrl+p    Previous command"
+    echo "ctrl+n    Next command"
+    echo "ctrl+a    Move beginning"
+    echo "ctrl+e    Move ending"
+    echo "alt+b     Move back a word"
+    echo "alt+f     Move forward a word"
+    echo "ctrl+b    Move back a letter"
+    echo "ctrl+f    Move forward a letter"
+    echo "ctrl+h    Delete back a letter"
+    echo "ctrl+d    Delete forward a letter"
+    echo "ctrl+u    Delete to beginning"
+    echo "ctrl+k    Delete to end"
+    echo "ctrl+w    Delete back a word"
+    echo "alt+d     Delete forward a word"
+    echo "ctrl+l    Clear screen"
+    echo "ctrl+y    Paste previously deleted characters"
+    echo "ctrl+x e  Begin editing in editor"
+    echo "less +F /file   Follow file. Ctrl+C to stop"
+}
 help-wifi() {
     # https://wiki.archlinux.org/index.php/NetworkManager#nmcli
     # https://fedoraproject.org/wiki/Networking/CLI
