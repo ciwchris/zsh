@@ -8,7 +8,9 @@ ZSH=/usr/share/oh-my-zsh/
 ZSH_THEME="theunraveler"
 [[ -f $HOME/.bin/color-mode/current-color-mode ]] && SOLARIZED_THEME=$(<$HOME/.bin/color-mode/current-color-mode)
 
-PATH+=:$HOME/.bin
+PATH+=:$HOME/.bin:$HOME/go/bin
+export GOPATH=$HOME/go
+export LANG=en_US.UTF-8
 
 help-wifi() {
     # https://wiki.archlinux.org/index.php/NetworkManager#nmcli
